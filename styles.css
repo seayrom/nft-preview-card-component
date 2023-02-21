@@ -1,0 +1,212 @@
+/* ******************** */
+/* VARIABLES */
+/* ******************** */
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue_main-bg: hsl(217, 54%, 11%);
+    --Very-dark-blue_card-bg: hsl(216, 50%, 16%);
+    --Very-dark-blue_line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* ******************* */
+/* RESETS */
+/* ******************* */
+html {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.6;
+    text-rendering: optimizeSpeed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue_main-bg);
+
+}
+
+/* ******************* */
+/* CARD LAYOUT*/
+/* ******************* */
+
+.card {
+    background-color: var(--Very-dark-blue_card-bg);
+    max-width: 23rem;
+    padding: 1.9rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+}
+
+/* ******************** */
+/* CARD LAYOUT IMG */
+/* ******************** */
+
+.card-images {
+    position: relative;
+}
+
+.card-images:hover {
+    background-color: var(--Cyan);
+    cursor: pointer;
+}
+
+.equilibrium {
+    width: 22rem;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+
+.card-images:hover > .equilibrium {
+    opacity: 0.5;
+}
+
+.card-images > svg {
+    position: absolute;
+    top: 41%;
+    left: 43%;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.card-images:hover > svg {
+    opacity: 1;
+}
+
+/* ******************** */
+/* CARD LAYOUT TEXT  */
+/* ******************** */
+
+h1 {
+    color: var(--white);
+    font-weight: 600;
+    margin: 0.7rem 0;
+}
+
+h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+p {
+    color: var(--Soft-blue);
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.price-deadline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight:  600;
+    margin: 1rem 0;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    color: var(--Cyan);
+}
+
+.deadline {
+    color: var(--Soft-blue);
+}
+
+span > svg {
+    margin-right: 0.31rem;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: var(--Very-dark-blue_line);
+}
+
+.creator-info {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.creator-info > img {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    width: 3rem;
+    margin-right: 1.2rem;
+}
+
+.creator-info > div {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--Soft-blue);
+}
+
+.creator-info strong {
+    color: var(--white);
+
+}
+
+.name:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
